@@ -52,15 +52,15 @@ seg_len = df['events'].apply(last_two_diff)
 
 # %%
 from dataset import GolfDB
-golf_data=GolfDB(df_dir)
+golf_data=GolfDB(df_dir,method='mediapipe')
 
 # %%
 # golf_data.get_videos_data('dataset/data/orig_videos')    
 
 # %%
-# golf_data.get_video_pose_landmark() ## Done
+golf_data.get_video_pose_landmark() ## Done
 
-golf_data.update_video_metadata()
+# golf_data.update_video_metadata()
 
 # %%
 # golf_data.get_shot_data_points()
